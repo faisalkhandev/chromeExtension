@@ -1,11 +1,12 @@
 {
     "manifest_version": 3,
-    "name": "Tab Manager for Chrome Extension Docs",
-    "description": "Organizes your Chrome extension and Chrome Web store documentation tabs.",
+    "name": "Bookmark Leads",
+    "description": "Save your leads form Linkedin, Facebook or anywhere. once you add it. it won't go away until you delete it",
     "version": "1.0",
     "icons": {
-        "16": "./images/bookmark16.png",
-        "32": "./images/bookmark32.png"
+        "16": "images/bookmark-leads32.png",
+        "32": "images/bookmark-leads32.png",
+        "64": "images/bookmark-leads32.png"
     },
     "action": {
         "default_popup": "index.html"
