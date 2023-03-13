@@ -30,3 +30,15 @@ button {
     padding: 5px;
     font-size: 16px;
 }
+
+ul {
+    list-style: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 5px;
+}
+
+li a {
+    text-decoration: none;
+    color: #18122B
+}

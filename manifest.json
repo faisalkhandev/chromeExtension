@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Tab Manager for Chrome Extension Docs",
+    "description": "Organizes your Chrome extension and Chrome Web store documentation tabs.",
+    "version": "1.0",
+    "icons": {
+        "16": "./images/bookmark16.png",
+        "32": "./images/bookmark32.png"
+    },
+    "action": {
+        "default_popup": "index.html"
+    },
+    "host_permissions": [
+        "https://developer.chrome.com/*"
+    ],
+    "permissions": [
+        "tabGroups"
+    ]
+}

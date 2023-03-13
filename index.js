@@ -1,4 +1,4 @@
-let myLeads = ["faisalkhandev.com"];
+let myLeads = [];
 let inputValue = document.getElementById("inputValue");
 let saveBtn = document.getElementById("saveButton");
 let ul = document.getElementById("ul-el");
@@ -11,7 +11,8 @@ saveBtn.addEventListener("click", () => {
     }
     if (myLeads.includes(lead)) { // check if lead already exists
         alert("This lead already exists.");
-    } else {
+    }
+    else {
         myLeads.push(lead);
         renderData();
         inputValue.value = "";
@@ -22,7 +23,12 @@ saveBtn.addEventListener("click", () => {
 let renderData = () => {
     listItems = ""; // reset listItems to avoid duplicates
     for (let i = 0; i < myLeads.length; i++) {
-        listItems += "<li>" + myLeads[i] + "</li>";
+        listItems += `
+        <li>
+        
+        <a target="_blank" href="${myLeads[i]}">  ${myLeads[i]} 
+
+        </li>`
     }
     ul.innerHTML = listItems;
 };
