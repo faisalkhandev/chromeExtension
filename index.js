@@ -44,6 +44,8 @@ saveBtn.addEventListener("click", () => {
 
 });
 
-clearBtn.addEventListener("click", () => {
+clearBtn.addEventListener("dblclick", () => {
     localStorage.clear()
+    myLeads = []
+    renderData()
 })
