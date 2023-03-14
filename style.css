@@ -42,5 +42,11 @@ ul {
 
 li a {
     text-decoration: none;
-    color: #18122B
+    color: #735ac7
+}
+
+#clearButton {
+    background-color: red;
+    color: white;
+    border: 1px solid rgb(50, 168, 119);
 }
