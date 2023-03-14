@@ -4,7 +4,6 @@ let saveBtn = document.getElementById("saveButton");
 let ul = document.getElementById("ul-el");
 
 let leadStorage = JSON.parse(localStorage.getItem("myLeads"))
-
 let listItems = "";
 
 
@@ -21,12 +20,10 @@ let renderData = () => {
     ul.innerHTML = listItems;
 };
 
-
 if (leadStorage) {
     myLeads = leadStorage
     renderData()
 }
-
 
 
 saveBtn.addEventListener("click", () => {
