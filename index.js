@@ -2,6 +2,7 @@ let myLeads = [];
 let inputValue = document.getElementById("inputValue");
 let saveBtn = document.getElementById("saveButton");
 let ul = document.getElementById("ul-el");
+let clearBtn = document.getElementById("clearButton")
 
 let leadStorage = JSON.parse(localStorage.getItem("myLeads"))
 let listItems = "";
@@ -42,3 +43,7 @@ saveBtn.addEventListener("click", () => {
     }
 
 });
+
+clearBtn.addEventListener("click", () => {
+    localStorage.clear()
+})
