@@ -2,23 +2,11 @@ let myLeads = [];
 let inputValue = document.getElementById("inputValue");
 let saveBtn = document.getElementById("saveButton");
 let ul = document.getElementById("ul-el");
+
+let leadStorage = JSON.parse(localStorage.getItem("myLeads"))
+
 let listItems = "";
 
-saveBtn.addEventListener("click", () => {
-    let lead = inputValue.value.trim(); // remove any leading or trailing whitespace
-    if (lead === "") {
-        return;
-    }
-    if (myLeads.includes(lead)) { // check if lead already exists
-        alert("This lead already exists.");
-    }
-    else {
-        myLeads.push(lead);
-        renderData();
-        inputValue.value = "";
-    }
-
-});
 
 let renderData = () => {
     listItems = ""; // reset listItems to avoid duplicates
@@ -32,3 +20,28 @@ let renderData = () => {
     }
     ul.innerHTML = listItems;
 };
+
+
+if (leadStorage) {
+    myLeads = leadStorage
+    renderData()
+}
+
+
+
+saveBtn.addEventListener("click", () => {
+    let lead = inputValue.value.trim(); // remove any leading or trailing whitespace
+    if (lead === "") {
+        return;
+    }
+    if (myLeads.includes(lead)) { // check if lead already exists
+        alert("This lead already exists.");
+    }
+    else {
+        myLeads.push(lead);
+        inputValue.value = "";
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        renderData();
+    }
+
+});
