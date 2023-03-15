@@ -4,7 +4,7 @@ let saveBtn = document.getElementById("saveButton");
 let ul = document.getElementById("ul-el");
 let clearBtn = document.getElementById("clearButton")
 
-let leadStorage = JSON.parse(localStorage.getItem("myLeads"))
+let leadStorage = JSON.parse(localStorage.getItem("myLeads")) //getting stored values in Local Storage
 let listItems = "";
 
 
