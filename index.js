@@ -27,20 +27,16 @@ if (leadStorage) {
 }
 
 
-saveBtn.addEventListener("click", () => {
-    let lead = inputValue.value.trim(); // remove any leading or trailing whitespace
-    if (lead === "") {
-        return;
-    }
-    if (myLeads.includes(lead)) { // check if lead already exists 
-        alert("This lead already exist.");
-    }
-    else {
-        myLeads.push(lead);
-        inputValue.value = "";
-        localStorage.setItem("myLeads", JSON.stringify(myLeads))
-        renderData();
-    }
+
+if (myLeads.includes(lead)) { // check if lead already exists 
+    alert("This lead already exist.");
+}
+else {
+    myLeads.push(lead);
+    inputValue.value = "";
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    renderData();
+}
 
 });
 
