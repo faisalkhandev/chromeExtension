@@ -32,8 +32,8 @@ saveBtn.addEventListener("click", () => {
     if (lead === "") {
         return;
     }
-    if (myLeads.includes(lead)) { // check if lead already exists
-        alert("This lead already exists.");
+    if (myLeads.includes(lead)) { // check if lead already exists 
+        alert("This lead already exist.");
     }
     else {
         myLeads.push(lead);
