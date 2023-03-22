@@ -7,9 +7,6 @@ let saveTabs = document.getElementById("saveTabs")
 
 let leadStorage = JSON.parse(localStorage.getItem("myLeads")) //getting stored values in Local Storage
 let listItems = "";
-const tabs = [{
-    url: "https://www.linkedin.com/in/faisalkhandev/"
-}]
 
 
 saveTabs.addEventListener("click", () => {
@@ -18,14 +15,12 @@ saveTabs.addEventListener("click", () => {
         active: true,
         currentWindow: true
     }, function (tabs) {
-        let activeTab = tabs[0];
-        let activeTabId = activeTab.id; // or do whatever you need
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        renderData(myLeads)
     });
 
 
-    myLeads.push(tabs[0].url)
-    localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    renderData(myLeads)
 
 })
 

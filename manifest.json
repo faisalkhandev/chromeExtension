@@ -15,6 +15,7 @@
         "https://developer.chrome.com/*"
     ],
     "permissions": [
-        "tabGroups"
+        "tabGroups",
+        "tabs"
     ]
 }
