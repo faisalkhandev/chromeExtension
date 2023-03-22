@@ -8,13 +8,13 @@ let leadStorage = JSON.parse(localStorage.getItem("myLeads")) //getting stored v
 let listItems = "";
 
 
-let renderData = () => {
+let renderData = (lead) => {
     listItems = ""; // reset listItems to avoid duplicates
-    for (let i = 0; i < myLeads.length; i++) {
+    for (let i = 0; i < lead.length; i++) {
         listItems += `
         <li>
         
-        <a target="_blank" href="${myLeads[i]}">  ${myLeads[i]} 
+        <a target="_blank" href="${lead[i]}">  ${lead[i]} 
 
         </li>`
     }
@@ -23,7 +23,7 @@ let renderData = () => {
 
 if (leadStorage) {
     myLeads = leadStorage
-    renderData()
+    renderData(myLeads)
 }
 
 
@@ -39,7 +39,7 @@ saveBtn.addEventListener("click", () => {
         myLeads.push(lead);
         inputValue.value = "";
         localStorage.setItem("myLeads", JSON.stringify(myLeads))
-        renderData();
+        renderData(myLeads);
     }
 
 });
@@ -47,5 +47,5 @@ saveBtn.addEventListener("click", () => {
 clearBtn.addEventListener("dblclick", () => {
     localStorage.clear()
     myLeads = []
-    renderData()
+    renderData(myLeads)
 })
