@@ -14,7 +14,7 @@ const tabs = [{
 
 saveTabs.addEventListener("click", () => {
 
-    console.log("Hello sir g");
+
 
 })
 
