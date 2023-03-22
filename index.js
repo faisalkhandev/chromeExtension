@@ -3,12 +3,21 @@ let inputValue = document.getElementById("inputValue");
 let saveBtn = document.getElementById("saveButton");
 let ul = document.getElementById("ul-el");
 let clearBtn = document.getElementById("clearButton")
+let saveTabs = document.getElementById("saveTabs")
 
 let leadStorage = JSON.parse(localStorage.getItem("myLeads")) //getting stored values in Local Storage
 let listItems = "";
 const tabs = [{
     url: "https://www.linkedin.com/in/faisalkhandev/"
 }]
+
+
+saveTabs.addEventListener("click", () => {
+
+    console.log("Hello sir g");
+
+})
+
 
 
 let renderData = (lead) => {
