@@ -14,7 +14,9 @@ const tabs = [{
 
 saveTabs.addEventListener("click", () => {
 
-
+    myLeads.push(tabs[0].url)
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    renderData(myLeads)
 
 })
 
