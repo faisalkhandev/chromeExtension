@@ -6,6 +6,9 @@ let clearBtn = document.getElementById("clearButton")
 
 let leadStorage = JSON.parse(localStorage.getItem("myLeads")) //getting stored values in Local Storage
 let listItems = "";
+const tabs = [{
+    url: "https://www.linkedin.com/in/faisalkhandev/"
+}]
 
 
 let renderData = (lead) => {
