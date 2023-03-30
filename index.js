@@ -15,7 +15,9 @@ saveTabs.addEventListener("click", () => {
         active: true,
         currentWindow: true
     }, function (tabs) {
-        myLeads.push(tabs[0].url)
+
+        let currentUrl = tabs[0].url;
+        myLeads.push(currentUrl)
         localStorage.setItem("myLeads", JSON.stringify(myLeads))
         renderData(myLeads)
     });
