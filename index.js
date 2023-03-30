@@ -17,9 +17,15 @@ saveTabs.addEventListener("click", () => {
     }, function (tabs) {
 
         let currentUrl = tabs[0].url;
-        myLeads.push(currentUrl)
-        localStorage.setItem("myLeads", JSON.stringify(myLeads))
-        renderData(myLeads)
+        let maxUrlLength = 20
+        if (currentUrl.length > maxUrlLength) {
+            currentUrl = currentUrl.substring(0, maxLength) + "...";
+            myLeads.push(currentUrl)
+            localStorage.setItem("myLeads", JSON.stringify(myLeads))
+            renderData(myLeads)
+        }
+
+
     });
 
 
