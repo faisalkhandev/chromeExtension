@@ -15,7 +15,7 @@ saveTabs.addEventListener("click", () => {
         currentWindow: true
     }, function (tabs) {
         let currentUrl = tabs[0].url;
-        const maxLength = 20;
+        const maxLength = 25;
         if (currentUrl.length > maxLength) {
             currentUrl = currentUrl.substring(0, maxLength) + ".....";
         }
